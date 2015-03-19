@@ -4,228 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>AgileFrance, la grande conférence agile francophone sans sponsor, de la communauté pour la communauté</title>
 
-		<style>
-			html {
-				background-color: #FAFAFA;
-				background-image:		url(img/audience.png),	url(img/background.png);
-				background-position:	left bottom -8em,		top; /* same as .frontrow bottom */
-				background-attachment: fixed;
-			}
-
-			body {
-				font-family: 'Architects Daughter', cursive;
-				text-align: center;
-				font-size: 140%;
-
-				width: 35em;
-				margin: auto;
-				box-sizing: border-box;
-			}
-
-			h1, h2, h3, h4, h5, h6 {
-				font-family: 'Coming Soon', cursive;
-			}
-
-			html, section {
-				background-repeat: no-repeat;
-				background-size: 100%;
-			}
-
-			section {
-				margin-bottom: -1em;
-			}
-
-			p, ul {
-				text-align: left;
-			}
-
-			.frontrow {
-				position: fixed;
-				bottom: -8em; /* same as body background-position */
-				width: 32%;
-			}
-
-			.frontrow.left {
-				left: 0;
-			}
-
-			.frontrow.right {
-				right: 0;
-			}
-
-			.intro {
-				font-weight: lighter;
-			}
-
-			iframe {
-				width: 100%;
-			}
-
-			#logo {
-				max-width: 50%;
-				margin-top: 30%;
-				margin-bottom: 15%;
-
-				-webkit-animation-delay: 2s;
-						animation-delay: 2s;
-			}
-
-			#announcement {
-				background-image: url(img/agenda.png);
-				padding: 10.35em 5em 4em 5em;
-				min-height: 33em;
-			}
-
-			.vevent time, .vevent .year, .vevent .url {
-				visibility: hidden;
-			}
-
-			.vevent .location {
-				display: block;
-			}
-
-			#video {
-				background-image: url(img/phone.png);
-
-				-webkit-transform: rotateZ(4deg);
-					-ms-transform: rotateZ(4deg);
-						transform: rotateZ(4deg);
-			}
-
-			/** this set of instructions to keep iframe image ratio **/
-			#video {
-				position: relative;
-			}
-
-			#video:after {
-				content: " ";
-				display: block;
-				padding-top: 50.55%; /* background-image ratio  */
-			}
-
-			#video iframe {
-				position: absolute;
-				height: 85%;
-				width: 77%;
-				top: 8%;
-				left: 11.5%;
-			}
-			/** end of iframe image ratio code **/
-
-			#definition {
-				background-image: url(img/paper.png);
-				padding: 1em 3em;
-				min-height: 23em;
-			}
-
-			#definition ul {
-				padding: 0;
-			}
-
-			#definition li {
-				list-style-type: none;
-			}
-
-			#definition li::before {
-				content: "✔︎";
-				margin-left: -1.75em;
-				margin-right: .75em;
-			}
-
-			#ticket {
-				background-image: url(img/tickets.png);
-				padding-top: 15em;
-			}
-
-			#ticket iframe {
-				border: #333 2px inset;
-				height: 20em;
-			}
-
-			.folded {
-				background-color: white;
-				padding: .5em;
-				border: 1px outset #999;
-			}
-
-			#directions {
-				position: relative;
-				height: 18em;
-
-				-webkit-transform: rotateZ(-3deg);
-					-ms-transform: rotateZ(-3deg);
-						transform: rotateZ(-3deg);
-			}
-
-			#directions:target {
-				z-index: 1;
-				position: absolute;
-				height: 95%;
-				width: 90%;
-				left: 5%;
-				top: 1%;
-
-				-webkit-transform: rotateZ(0deg);
-					-ms-transform: rotateZ(0deg);
-						transform: rotateZ(0deg);
-			}
-
-			#directions iframe {
-				height: 100%;
-			}
-
-			#directions, #directions iframe {
-				-webkit-transition: 1s all;
-				   -moz-transition: 1s all;
-					-ms-transition: 1s all;
-						transition: 1s all;
-			}
-
-			#directions a {
-				font-weight: bold;
-				color: inherit;
-				text-decoration: none;
-				position: absolute;
-				top: .5em;
-				right: .75em;
-				text-shadow: #FFF 0 0 .2em;
-			}
-
-			#directions a[href="#map"], #directions:target a[href="#directions"] {
-				display: none;
-			}
-
-			#directions a[href="#directions"], #directions:target a[href="#map"] {
-				display: block;
-			}
-
-			#cfp {
-				background-image: url(img/lanyard.png);
-				padding: 23em 2em 4em 20em;
-			}
-
-
-			@media screen and (min-width: 1600px) {
-				body { font-size: 180%; }
-			}
-
-			@media screen and (max-width: 1000px) {
-				body { font-size: 100%; }
-			}
-
-			@media screen and (max-width: 600px) {
-				body { font-size: 80%; }
-
-				#definition {
-					padding: 1em 2.5em;
-				}
-			}
-		</style>
-
-		<link rel="stylesheet" type="text/css" href="css/folded.css"/>
-		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
-		<link href="fonts/architects-daughter/stylesheet.css" type="text/css" rel="stylesheet"/>
-		<link href="fonts/coming-soon/stylesheet.css" type="text/css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="css/app.min.css"/>
 	</head>
 	<body>
 		<header>
@@ -234,8 +13,9 @@
 
 		<section id="announcement">
 			<div class="vevent">
-				<time datetime="2015-06-18" class="dtstart">18&ndash;</time>
-				<time datetime="2015-06-19" class="dtend">19 juin</time>
+				<time datetime="2015-06-18" class="dtstart">18 -</time>
+				<time datetime="2015-06-19" class="dtend">19</time>
+				<span class="month">Juin</span>
 				<span class="year">2015</span>
 				<span class="location">
 					Chalet de la Porte Jaune<br/>
@@ -286,10 +66,14 @@
 		</section>
 
 		<section id="cfp">
-			<p>Une découverte incroyable que vous voulez partager avec d’autres praticiens&nbsp;?</p>
-			<p>Un atelier que vous souhaitez animer pour faire grandir nos connaissances&nbsp;?</p>
-			<p>Une question à poser et sur laquelle vous avez envie d'échanger&nbsp;?</p>
-			<a href="https://call4paper-agileconf.herokuapp.com">Proposez un sujet !</a>
+			<p>Partagez une découverte&nbsp;!</p>
+			<p>Lancez une discussion&nbsp;!</p>
+			<p>Posez une question&nbsp;!</p>
+			<p>Animez un atelier&nbsp;!</p>
+			<p>Faites réfléchir&nbsp;!</p>
+
+			<p class="cta"><a href="https://call4paper-agileconf.herokuapp.com">Proposez un sujet&nbsp;!</a></p>
+ 		</section>
 		</section>
 
 		<img class="frontrow left" src="img/frontrow-left.png" alt=""/>
