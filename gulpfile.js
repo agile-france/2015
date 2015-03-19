@@ -5,16 +5,17 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var minifyCSS = require('gulp-minify-css');
+var htmlmin = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 
 gulp.task('clean', function (cb) {
   del([
     // delete everything under public directory
-    'public/*',
+    './public/*',
     // except Git files
-    '!public/.git',
-    '!public/.gitignore'
+    '!./public/.git',
+    '!./public/.gitignore'
   ], cb);
 });
 
@@ -29,7 +30,13 @@ gulp.task('css', function () {
     .pipe(rename('app.min.css'))
     .pipe(gulp.dest('./public/css'));
 });
- 
+
+gulp.task('html-min', function() {
+  return gulp.src('./app/assets/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./public'));
+});
+
 gulp.task('image-min', function () {
   return gulp.src('./app/assets/img/*')
     .pipe(imagemin({
@@ -41,8 +48,8 @@ gulp.task('image-min', function () {
 });
 
 gulp.task('copy', function() {
-  return gulp.src(['app/assets/**', '!app/assets/css/**', '!app/assets/img/**'])
-    .pipe(gulp.dest('public'));
+  return gulp.src(['./app/assets/fonts/**'])
+    .pipe(gulp.dest('./public'));
 });
 
-gulp.task('build', ['clean', 'copy', 'css', 'image-min']);
+gulp.task('build', ['clean', 'copy', 'css', 'html-min', 'image-min']);
