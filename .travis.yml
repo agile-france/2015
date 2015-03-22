@@ -11,7 +11,7 @@ deploy:
   bucket: 2015.conference-agile.fr
   skip_cleanup: true
   endpoint: 2015.conference-agile.fr.s3-website.eu-central-1.amazonaws.com
-  region: Frankfurt
+  region: eu-central-1
   on:
     repo: agile-france/2015
     branch: s3
