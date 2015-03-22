@@ -1,0 +1,25 @@
+{
+  "name": "fontfaceonload",
+  "version": "0.1.6",
+  "main": [
+    "dist/fontfaceonload.js"
+  ],
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": ">=1.9.1",
+    "qunit": ">=1.12.0"
+  },
+  "homepage": "https://github.com/zachleat/fontfaceonload",
+  "_release": "0.1.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.6",
+    "commit": "de5e827b941ab8f59581604d5d7a08e72ef1cfcc"
+  },
+  "_source": "git://github.com/zachleat/fontfaceonload.git",
+  "_target": "0.1.6",
+  "_originalSource": "fontfaceonload"
+}
